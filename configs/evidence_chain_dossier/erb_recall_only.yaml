@@ -1,0 +1,19 @@
+max_candidates_per_face: 12
+max_evidence_photos_per_person: 10
+max_owner_facts: 18
+min_identity_score: 0.34
+min_identity_margin: 0.03
+allow_first_name_predictions: true
+infer_family_last_name: true
+
+use_evidence_recall_broadener: true
+recall_max_candidates_per_face: 22
+recall_min_event_bridge_score: 0.30
+recall_event_bonus_weight: 0.18
+recall_text_only_bonus_weight: 0.08
+recall_role_bonus_weight: 0.08
+
+use_llm_reranker: false
+use_llm_joint_assignment: false
+use_llm_global_consistency: false
+use_llm_readout: false

@@ -1,0 +1,9 @@
+# Benchmark 导出配置
+# LLM 配置已集中到 configs/models.yaml（role: pipeline_llm）
+
+benchmark:
+  description_batch_size: 30
+  text_entity_max_workers: 48
+  album_photo_target:
+    min_total: 500
+    max_total: 1000

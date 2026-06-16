@@ -1,0 +1,76 @@
+{
+  "schema_version": "icde_final_result_manifest.v1",
+  "generated_at": "2026-06-01T17:36:17+08:00",
+  "manifest_update_note": "Refreshed for the current paper-facing table set after completing PAL-TRACE M6 token-audit accounting, long-context M3 modality ablations, expanded M7 backbone robustness, and clean repository finalization.",
+  "run_id": "pal_bench_icde2027_20260528_195431",
+  "paper_root": "paper_experiments/pal_bench_icde2027_20260528_195431",
+  "qwen_agent_root": "paper_experiments/pal_bench_icde2027_qwen36_agent_20260529_001923",
+  "m7_backbone_root": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131",
+  "m6_pal_trace_token_audit_root": "paper_experiments/pal_bench_icde2027_m6_pal_trace_token_audit_20260601_164623",
+  "git_commit": "c5dc12a28ecd78aaf2c8a4fd4b08184b2d847390",
+  "git_dirty": false,
+  "users_root": "data/full/users",
+  "agent_llm_primary": "agent_llm / gpt-5.4",
+  "judge_llm_official": "eval_judge / qwen3.6-35b-a3b",
+  "commands_path": "paper_experiments/pal_bench_icde2027_20260528_195431/manifests/commands.sh",
+  "table_status": {
+    "M1": "complete: main full50 official multi-system table",
+    "M2": "complete: difficulty-stratified official table",
+    "M3": "complete: PAL-TRACE, Multimodal RAG, and Long-context multimodal LLM modality ablation",
+    "M6": "complete: native resource/runtime/token diagnostics",
+    "M7": "complete: expanded full50 PAL-TRACE backbone robustness with nine backbone rows",
+    "M8": "complete: PAL-TRACE mechanism analysis"
+  },
+  "tables": {
+    "M1": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/main_multisystem_results.md",
+    "M2": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/difficulty_results.md",
+    "M3": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/modality_ablation.md",
+    "M6": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/resource_runtime_diagnostics.md",
+    "M6_cost_equivalent_legacy": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/cost_equivalent.md",
+    "M7": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/llm_backbone_robustness.md",
+    "M7_expanded_source": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/tables/llm_backbone_robustness.md",
+    "M8": "paper_experiments/pal_bench_icde2027_20260528_195431/tables/mechanism_analysis.md",
+    "public_report": "results/paper_tables/full50_official_report.md"
+  },
+  "diagnostics": {
+    "modality_mask_spec": "paper_experiments/pal_bench_icde2027_20260528_195431/diagnostics/modality_mask_spec.json",
+    "m3_long_context_text_off": "paper_experiments/pal_bench_icde2027_20260528_195431/eval/modality/long_context_mm_llm_text_off_full50/official_llm_semantic/aggregate_formal.json",
+    "m3_long_context_face_off": "paper_experiments/pal_bench_icde2027_20260528_195431/eval/modality/long_context_mm_llm_face_off_full50/official_llm_semantic/aggregate_formal.json",
+    "m3_long_context_metadata_off": "paper_experiments/pal_bench_icde2027_20260528_195431/eval/modality/long_context_mm_llm_metadata_off_full50/official_llm_semantic/aggregate_formal.json",
+    "m6_pal_trace_token_audit_summary": "paper_experiments/pal_bench_icde2027_m6_pal_trace_token_audit_20260601_164623/diagnostics/m6_pal_trace_token_audit_summary.md",
+    "m6_pal_trace_token_audit_resource_export": "paper_experiments/pal_bench_icde2027_m6_pal_trace_token_audit_20260601_164623/tables/m6_resource_runtime_diagnostics/cost_runtime.json",
+    "mechanism_bootstrap": "paper_experiments/pal_bench_icde2027_20260528_195431/diagnostics/mechanism_official_full50/bootstrap_summary.md",
+    "qwen_vs_gpt_bootstrap": "paper_experiments/pal_bench_icde2027_qwen36_agent_20260529_001923/comparison/bootstrap_qwen36_vs_gpt54/bootstrap_summary.md",
+    "m7_gemini31_flash_lite_pro_status": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/diagnostics/gemini31_flash_lite_pro_formal_status.md",
+    "m7_gemini31_pro_preview_partial_status": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/diagnostics/gemini31_pro_preview_partial_status.md",
+    "m7_nemotron3_nano_30b_a3b_fp8_1m_status": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/diagnostics/nemotron3_nano_30b_a3b_fp8_1m_status.md",
+    "m7_gemma4_26b_a4b_it_repaired_status": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/diagnostics/gemma4_26b_a4b_it_repaired_full50_status.md"
+  },
+  "eval_roots": {
+    "main_official": "paper_experiments/pal_bench_icde2027_20260528_195431/eval",
+    "modality_official": "paper_experiments/pal_bench_icde2027_20260528_195431/eval/modality",
+    "qwen_agent_official": "paper_experiments/pal_bench_icde2027_qwen36_agent_20260529_001923/eval",
+    "m7_backbone_official": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/eval",
+    "m6_pal_trace_token_audit_official": "paper_experiments/pal_bench_icde2027_m6_pal_trace_token_audit_20260601_164623/eval"
+  },
+  "run_roots": {
+    "main_runs": "paper_experiments/pal_bench_icde2027_20260528_195431/runs",
+    "modality_runs": "paper_experiments/pal_bench_icde2027_20260528_195431/runs/modality",
+    "qwen_agent_runs": "paper_experiments/pal_bench_icde2027_qwen36_agent_20260529_001923/runs",
+    "m7_backbone_runs": "paper_experiments/pal_bench_icde2027_m7_backbone_20260529_120131/runs",
+    "m6_pal_trace_token_audit_runs": "paper_experiments/pal_bench_icde2027_m6_pal_trace_token_audit_20260601_164623/runs"
+  },
+  "paper_use_status": {
+    "ready_for_main_text": [
+      "M1",
+      "M2",
+      "M3",
+      "M6",
+      "M7",
+      "M8"
+    ],
+    "ready_with_scope_caveat": [],
+    "deferred_or_not_run": []
+  },
+  "manifest_path": "paper_experiments/pal_bench_icde2027_20260528_195431/manifests/final_result_manifest.json"
+}

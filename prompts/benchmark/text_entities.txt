@@ -1,0 +1,40 @@
+You are extracting text-side entities from album photos for a benchmark.
+Each photo provides a caption (a VLM-generated image description) and a
+visible_text list (OCR strings the VLM read off the image).
+
+Rules:
+1. Extract ONLY entities explicitly mentioned in caption or visible_text.
+   Valid entity_type values are:
+   - "person": person names, nicknames, relation-prefixed names such as "Mom Anna" or "Dr. Lee"
+   - "organization": companies, schools, clubs, associations, event hosts
+   - "location": named places, venues, cities, landmarks, routes
+   - "event": named events, meetups, conferences, parties, races, rides
+2. Do NOT extract generic visual objects, clothing, activities, scene labels,
+   bare relations ("mom", "the doctor"), pronouns, generic people ("a woman",
+   "a friend"), dates, times, prices, phone numbers, or random OCR fragments.
+3. Use exactly the surface form as it appears in the source. Do not normalise,
+   expand, infer, canonicalise, or map entities to people/faces.
+4. Mark `source: "caption"` if the entity comes from the caption text. Mark
+   `source: "visible_text"` if the entity comes from any visible_text string.
+   If the same entity appears in BOTH, emit two separate entries (one per source).
+   If it appears multiple times in the same source, emit it once for that source.
+5. An empty entity list is valid and expected for photos with no text-side
+   entities — do not invent entries.
+6. Preserve order of first appearance per source.
+
+Return strict JSON only:
+{{
+  "photos": [
+    {{
+      "photo_id": "photo_id_here",
+      "entities": [
+        {{"surface": "Elena Mendoza", "entity_type": "person", "source": "visible_text"}},
+        {{"surface": "Miami Cycling Meetup", "entity_type": "organization", "source": "caption"}},
+        {{"surface": "Rickenbacker Causeway", "entity_type": "location", "source": "visible_text"}}
+      ]
+    }}
+  ]
+}}
+
+Input items:
+{items_json}

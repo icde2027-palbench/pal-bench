@@ -1,0 +1,18 @@
+providers:
+  openai_default:
+    provider: openai_compatible
+    base_url: ${PALBENCH_OPENAI_BASE_URL:https://api.openai.com/v1}
+    api_key: ${PALBENCH_OPENAI_API_KEY}
+    model: ${PALBENCH_OPENAI_MODEL}
+    timeout: 1800
+    max_retries: 3
+    retry_backoff: 2.0
+    supports_response_format: true
+
+roles:
+  agent_llm:
+    provider: openai_default
+  eval_judge:
+    provider: openai_default
+  pipeline_llm:
+    provider: openai_default

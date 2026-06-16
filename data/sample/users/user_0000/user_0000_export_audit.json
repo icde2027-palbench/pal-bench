@@ -1,0 +1,14 @@
+{
+  "schema_version": "export_audit.v1",
+  "user_id": "user_0000",
+  "passed": true,
+  "summary": {
+    "passed": true,
+    "n_errors": 0,
+    "n_warnings": 0,
+    "n_agent_photos": 563,
+    "n_eval_targets": 52
+  },
+  "errors": [],
+  "warnings": []
+}

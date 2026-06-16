@@ -1,0 +1,16 @@
+max_candidates_per_face: 12
+max_evidence_photos_per_person: 10
+max_owner_facts: 14
+min_identity_score: 0.34
+min_identity_margin: 0.03
+allow_first_name_predictions: true
+infer_family_last_name: true
+use_llm_reranker: true
+use_llm_global_consistency: true
+use_llm_readout: true
+max_llm_calls: 6
+llm_top_candidates_per_face: 4
+llm_max_face_reviews: 3
+llm_accept_min_confidence: 0.40
+llm_owner_fact_budget: 10
+llm_photo_snippet_chars: 320

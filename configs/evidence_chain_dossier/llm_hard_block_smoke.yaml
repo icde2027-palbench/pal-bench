@@ -1,0 +1,44 @@
+max_candidates_per_face: 12
+max_evidence_photos_per_person: 10
+max_owner_facts: 18
+min_identity_score: 0.34
+min_identity_margin: 0.03
+allow_first_name_predictions: true
+infer_family_last_name: true
+
+use_evidence_recall_broadener: true
+use_owner_evidence_planner: true
+recall_max_candidates_per_face: 22
+recall_min_event_bridge_score: 0.30
+recall_event_bonus_weight: 0.18
+recall_text_only_bonus_weight: 0.08
+recall_role_bonus_weight: 0.08
+
+use_llm_reranker: false
+use_llm_batch_adjudicator: false
+use_llm_joint_assignment: true
+use_hard_identity_blocks: true
+use_llm_global_consistency: false
+use_llm_readout: false
+max_llm_calls: 8
+
+llm_max_joint_groups: 5
+llm_joint_top_candidates_per_face: 5
+llm_joint_recall_top_candidates_per_face: 7
+llm_joint_max_faces_per_group: 6
+llm_joint_max_scene_faces: 4
+llm_joint_max_names_per_group: 12
+
+llm_hard_max_blocks: 2
+llm_hard_top_candidates_per_face: 7
+llm_hard_max_faces_per_block: 4
+llm_hard_max_names_per_block: 10
+llm_hard_min_face_channel_score: 1.20
+llm_hard_accept_min_confidence: 0.68
+llm_hard_require_channel_support: true
+llm_hard_guard_duplicate_clusters: true
+
+llm_accept_min_confidence: 0.42
+llm_owner_fact_budget: 14
+owner_evidence_max_cards: 32
+llm_photo_snippet_chars: 220

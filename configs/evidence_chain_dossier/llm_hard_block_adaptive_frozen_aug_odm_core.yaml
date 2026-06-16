@@ -1,0 +1,72 @@
+max_candidates_per_face: 12
+max_evidence_photos_per_person: 10
+max_owner_facts: 18
+min_identity_score: 0.34
+min_identity_margin: 0.03
+allow_first_name_predictions: true
+infer_family_last_name: true
+
+use_evidence_recall_broadener: true
+use_owner_evidence_planner: true
+use_owner_fact_census: false
+use_frozen_evidence_augmentation: true
+owner_addendum_max_new_facts: 40
+owner_addendum_max_total_facts: 58
+owner_addendum_min_score: 4.0
+use_owner_detail_miner: true
+owner_detail_miner_max_calls: 1
+owner_detail_miner_photos_per_call: 32
+owner_detail_miner_max_new_facts: 12
+owner_detail_miner_min_confidence: 0.62
+use_relation_evidence_repair: true
+use_person_evidence_routing: true
+use_person_evidence_certificates: true
+person_evidence_certificate_max_chars: 1450
+recall_max_candidates_per_face: 24
+recall_min_event_bridge_score: 0.30
+recall_event_bonus_weight: 0.18
+recall_text_only_bonus_weight: 0.08
+recall_role_bonus_weight: 0.08
+
+use_llm_reranker: false
+use_llm_batch_adjudicator: false
+use_llm_joint_assignment: true
+use_llm_joint_photo_scenes: false
+use_llm_joint_pair_swaps: false
+use_llm_joint_name_conflicts: false
+use_llm_joint_coface_ambiguity: false
+use_hard_identity_blocks: true
+use_llm_adaptive_identity_repair: true
+use_llm_global_consistency: false
+use_llm_readout: true
+max_llm_calls: 9
+
+llm_max_joint_groups: 3
+llm_joint_top_candidates_per_face: 5
+llm_joint_recall_top_candidates_per_face: 7
+llm_joint_max_faces_per_group: 6
+llm_joint_max_scene_faces: 4
+llm_joint_max_names_per_group: 12
+
+llm_hard_max_blocks: 3
+llm_hard_top_candidates_per_face: 7
+llm_hard_max_faces_per_block: 4
+llm_hard_max_names_per_block: 10
+llm_hard_min_face_channel_score: 1.20
+llm_hard_accept_min_confidence: 0.68
+llm_hard_require_channel_support: true
+llm_hard_guard_duplicate_clusters: true
+
+llm_adaptive_repair_max_groups: 2
+llm_adaptive_repair_top_faces: 8
+llm_adaptive_repair_min_risk: 0.38
+llm_adaptive_repair_accept_min_confidence: 0.58
+llm_adaptive_repair_min_bridge_score: 0.36
+llm_adaptive_repair_min_recall_priority: 0.30
+llm_adaptive_repair_window_accept_min_confidence: 0.68
+llm_adaptive_repair_window_max_candidate_rank: 2
+
+llm_accept_min_confidence: 0.42
+llm_owner_fact_budget: 14
+owner_evidence_max_cards: 32
+llm_photo_snippet_chars: 260
